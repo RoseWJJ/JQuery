@@ -1,0 +1,47 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+	<head>
+		<title>css.html</title>
+
+		<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+		<meta http-equiv="description" content="this is my page">
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+		<!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+		<style type="text/css">
+.myp {
+	color: yellow;
+}
+
+</style>
+		<script type="text/javascript" src="jquery-3.2.1.js">
+</script>
+		<script type="text/javascript">
+$(function() {
+	//jquery方法的特点是  一般一个参数表示获取该参数的值，两个参数表示设置值；
+	/*
+		alert($("input").attr("type"));
+		$("input").attr("type","checkbox");
+	 */
+
+		$("p").addClass();
+		
+		//alert("xx");
+		//$("p").removeClass();
+	//css(键，值)添加行内样式 style=""
+	$(".myp1").css("color","red");
+	
+})
+</script>
+	</head>
+
+	<body>
+		<input type="text">
+		<p class="myp">
+			这是测试jquery 添加css内部样式
+		</p>
+		<p class="myp1">
+			这是测试jquery 添加css行内样式
+		</p>
+	</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+	<head>
+		<title>work.html</title>
+
+		<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+		<meta http-equiv="description" content="this is my page">
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+		<!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+
+
+
+		</style>
+		<script type="text/javascript" src="JQuery/WebRoot/META-INF/jquery-3.2.1.js">
+			</script>
+		<script type="text/javascript">
+			$(function() {
+			
+					$("p").bind("click",function(){alert($(this).text())});
+					$("#num").bind("click",function(){alert($("#t > :checkbox:checked").length)});
+					$("#emailAddress").bind("focusin",function(){$("#emailAddress").attr('placeholder',"")});
+					$("#emailAddress").bind("focusout",function(){$("#emailAddress").attr('placeholder',"请输入邮箱地址")});
+					$("#emailPassword").bind("focusin",function(){$("#emailPassword").attr('placeholder',"")});
+					$("#emailPassword").bind("focusout",function(){$("#emailPassword").attr('placeholder',"请输入邮箱密码")});
+					
+					$("#a").bind("click",function(){$("#aa option").eq(2).attr("selected","true")});
+					$("#b").bind("click",function(){$("#bb option").eq(1).attr("selected","true")});
+					$("#b").bind("click",function(){$("#bb option").eq(4).attr("selected","true")});
+					$("#c").bind("click",function(){$("[type=checkbox]").eq(1).attr("checked",'true')});
+					$("#c").bind("click",function(){$("[type=checkbox]").eq(3).attr("checked","true")});
+					
+					$("#d").bind("click",function(){$('input:radio').eq(1).attr('checked', 'true')})
+				
+					
+					$("#e").bind("click",function(){
+					
+					//选中的单选下拉框的值为
+					var  a = $("#aa option:checked").text();
+				
+					//所有被选中的多选下拉框的值
+					var b = $("#bb option:checked").text(); 
+					
+					//所有被选中的单选框的值
+					var c = $("input[type='radio']:checked").val();
+					
+					alert("选中的单选下拉框的值为："+a+"所有被选中的多选下拉框的值"+b+"所有被选中的单选框的值"+c);
+					
+					var d = $("input[type='checkbox']:checked").length;
+					for(var i = 0; i<d;i++){
+					alert("选中的多选下拉框的值为："+$("input[type='checkbox']:checked").eq(i).val());
+					}
+				})
+			})
+</script>
+
+	</head>
+
+	<body>
+	作业一：
+	<div>
+		<p>点击触发段落1</p>
+		<p>点击触发段落2</p>
+		<p>点击触发段落3</p>
+		<p>点击触发段落4</p>
+		<p>点击触发段落5</p>
+	</div>
+	作业二：
+	<div id="t">
+		<input type="checkbox" id="ck">test1
+		<input type="checkbox" id="ck">test2
+		<input type="checkbox" id="ck">test3
+		<input type="checkbox" id="ck">test4
+		<input type="checkbox" id="ck">test5
+		<input type="button" id="num" value="点击显示选中的复选框个数" />
+	</div>
+		作业三：
+	<div>
+		<input type="text" id="emailAddress" placeholder="请输入邮箱地址"/><br/>
+		<input type="password" id="emailPassword" placeholder="请输入邮箱密码"/><br/>
+		<input type="button" id="log" value="登录" />
+		
+	</div>
+		作业四：
+	<div id="f">
+		
+		<input type="button" id="a" value="使单选下拉框的'选择3号被选中'" />
+		<input type="button" id="b" value="使多选下拉框中的'选择2号'和'选择5号'被选中" />
+		
+		<input type="button" id="c" value="使多选框中的'多选2号'和'多选4号'被选中" />
+		<input type="button" id="d" value="使单选框的'选择2号被选中'" />
+		<input type="button" id="e" value="打印被选中的值" /><br/>
+		<select id="aa">
+			<option value="1">选择1号</option>
+		  	<option value="2">选择2号</option>
+		  	<option value="3">选择3号</option>
+		  	<option value="4">选择4号</option>
+		</select>
+		
+		<select id="bb" multiple="multiple" >
+		  <option value="1">选择1号</option>
+		  <option value="2">选择2号</option>
+		  <option value="3">选择3号</option>
+		  <option value="4">选择4号</option>
+		  <option value="5">选择5号</option>
+		</select>
+		<br/>
+		
+		<input type="checkbox"  value='多选1号' id="x">多选1号
+		<input type="checkbox"  value='多选2号' id="x">多选2号
+		<input type="checkbox"  value='多选3号' id="x">多选3号
+		<input type="checkbox"  value='多选4号' id="x">多选4号
+		<br/>
+		<input type="radio"  value='单选1号' name="c">单选1号
+		<input type="radio"  value='单选2号' name="c">单选2号
+		<input type="radio"  value='单选3号' name="c">单选3号
+		<input type="radio"  value='单选4号' name="c">单选4号
+		
+	</div>
+	</body>
+</html>

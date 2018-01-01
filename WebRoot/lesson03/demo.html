@@ -1,0 +1,92 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+	<head>
+		<title>work.html</title>
+
+		<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+		<meta http-equiv="description" content="this is my page">
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+		<!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+		<style>
+#card-trigger {
+	padding: 20px;
+	font-size: 20px;
+	font-family: "SimHei";
+	margin: 10px 50;
+}
+
+#a #card {
+	background: #eee;
+	padding: 20px;
+	display: block;
+	margin: 10px 50;
+}
+</style>
+
+
+
+		<script type="text/javascript" src="jquery-3.2.1.js">
+</script>
+		<script type="text/javascript">
+
+$(function() {
+	$("#a").click(function(){
+	
+		alert("我被点击了 ");
+		
+	})
+	$("#b").click(function(){
+		$("#a").unbind("click");
+	})
+	var c = $("#card");
+	$("input[type='button']").click(function() {
+
+		if (c.is(':visible')) {
+			c.hide();
+		} else {
+			c.show();
+		}
+
+	})
+})
+</script>
+
+	</head>
+
+	<body>
+		<input type="button" value="按钮" id="a">
+		<input type="button" value="清除" id="b">
+		<input type="button" value="显示/隐藏 公告">
+		<div id="card">
+			<h1>
+				十九大公告
+			</h1>
+			
+			<p>
+				【十大“成就”】 <br />
+				经济建设取得重大成就。
+				<br />
+				全面深化改革取得重大突破。
+				<br />
+				民主法治建设迈出重大步伐。
+				<br />
+				思想文化建设取得重大进展。
+				<br />
+				人民生活不断改善。
+				<br />
+				生态文明建设成效显著。
+				<br />
+				强军兴军开创新局面。
+				<br />
+				港澳台工作取得新进展。
+				<br />
+				全方位外交布局深入展开。
+				<br />
+				全面从严治党成效卓著。
+				<br />
+			</p>
+		</div>
+
+	</body>
+</html>

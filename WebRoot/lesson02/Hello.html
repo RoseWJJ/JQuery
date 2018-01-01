@@ -1,0 +1,105 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title>Hello.html</title>
+	
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <meta http-equiv="description" content="this is my page">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+	<script type="text/javascript" src="JQuery/WebRoot/META-INF/jquery-3.2.1.js"></script>
+	<script type="text/javascript">
+	//Jquery对象
+	//css选择器jquery 选择器 找到满足选择器条件的dom元素相关的jquery对象
+	//字符串就是用来设置
+	//jquery对象不能调用js的方法和属性只能调用jquery内置的属性和方法
+	
+		$(function(){
+			//var body = document.body;
+			//alert(body);
+			//var jObject = $("#MyDiv");
+			//debugger
+			//var jQob= $("#userName");
+			//alert(jQob.val());
+			//jquery对象转换成dom对象
+			//如果需要调用js的属性和方法 需要将jquery对象转换成dom对象
+			//var domObject=jQob[0];  //jquery对象
+			//alert(domObject.value);
+			
+			
+			
+			//dom对象对象转换成jquery
+			/*var userDom=document.getElementById("aa"); //dom对象
+			var jqoB =$(userDom);
+			alert(jqoB.val());*/
+			// eq获取的是 选择器选中多个jquery对象中 索引之的那个
+			/*var  j = $("input");
+			alert(j.eq(0).val());
+			//get 返回的是dom对象
+			alert(j.get(1).value)*/
+		$("tr:odd").not("#ex").css("background","gray");
+			
+			
+	})
+	</script>
+  </head>
+  
+  <body>
+  	<div id="MyDiv">
+  		演示jquery id选择器
+  		
+  	</div>
+  	<input type="text" id = "userName" value="eeeeeee">
+  	<input type="text" id = "aa" value="xx">
+  		<table>
+			<tr>
+				<th>
+					用户姓名
+				</th>
+				<th>
+					用户性别
+				</th>
+				<th>
+					用户年龄
+				</th>
+			</tr>
+			<tr id="ex">
+				<td>
+					张三
+				</td>
+				<td>
+					男
+				</td>
+				<td>
+					20
+				</td>
+			</tr>
+			<tr>
+				<td>
+					李四
+				</td>
+				<td>
+					女
+				</td>
+				<td>
+					18
+				</td>
+			</tr>
+
+			<tr>
+				<td>
+					王五
+				</td>
+				<td>
+					男
+				</td>
+				<td>
+					20
+				</td>
+			</tr>
+
+
+		</table>
+  </body>
+</html>

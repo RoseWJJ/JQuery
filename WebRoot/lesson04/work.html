@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+		<title>ajax.xhtml</title>
+		<meta http-equiv="keywords" content="enter,your,keywords,here" />
+		<meta http-equiv="description"
+			content="A short description of this page." />
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+
+		<script type="text/javascript" src="JQuery/WebRoot/lesson05/jquery-3.2.1.js">
+</script>
+		<script type="text/javascript">
+		$(function(){
+			$("input[type='button']").click(function(){
+			  var ip=$("#ip").val();
+			  var url = "http://restapi.amap.com/v3/ip";
+				$.ajax({	
+				   type: "POST",
+				   data:"?key=25748d3d75eeac214d8ce72b6dae6ae5&ip="+ip,
+				   url: url,
+				   dataType:'json',
+				   success: function(msg){
+				  	 $("#info").remove();
+				  	 var dz=msg.province;
+					 $(document.body).append("<div id='info'>"+"ip："+ip+"地址:"+dz+"</div>");
+				   },
+				   error:function(XMLHttpRequest, textStatus, errorThrown){
+							alert(textStatus+"---"+errorThrown);
+				   }
+				});
+			})
+		})
+</script>
+	</head>
+	<body>
+		<input id="ip" type="text" placeholder="请输入公网ip"/>
+		<input type="button" value="查询地址"/>
+	</body>
+</html>

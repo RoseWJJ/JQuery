@@ -1,0 +1,50 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+	<head>
+		<title>work.html</title>
+
+		<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+		<meta http-equiv="description" content="this is my page">
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+		<!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+
+
+
+
+		<script type="text/javascript" src="jquery-3.2.1.js">
+</script>
+		<script type="text/javascript">
+
+$(function() {
+	$("a").hover(function(e) {
+			e = e || window.event;
+			__xx = e.pageX ;
+			__yy = e.pageY;
+			console.log(__xx)
+			$("div").css({ 
+				"position":"absolute",
+				"left":__xx+20+"px",
+				"top":__yy-20+"px",
+				"display":"inline-block",
+			});
+			$("div").css("display","block");
+		}, function() {
+			$("div").css("display","none");
+		});
+	})	
+	
+	
+	
+
+</script>
+
+	</head>
+
+	<body>
+		<a href="https://www.baidu.com">百度</a>
+		<div style="display: none">
+			<img src="1.png" width="80px" height="40px" />
+		</div>
+	</body>
+</html>
